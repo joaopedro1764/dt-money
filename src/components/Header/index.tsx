@@ -7,10 +7,8 @@ export function Header() {
       <header className="w-full max-w-[1120px] px-3 flex justify-between items-center">
         <img alt="Logo Dt-Money" src={logo} />
         <Dialog.Root>
-          <Dialog.Trigger asChild>
-            <button className="bg-green-500 rounded-md cursor-pointer h-[50px] border-0 p-4 text-white font-bold hover:duration-700 hover:bg-green-700">
-              Nova transação
-            </button>
+          <Dialog.Trigger className="bg-green-500 rounded-md cursor-pointer h-[50px] border-0 p-4 text-white font-bold hover:duration-700 hover:bg-green-700">
+            Nova transação
           </Dialog.Trigger>
           <NewTransactionModal />
         </Dialog.Root>

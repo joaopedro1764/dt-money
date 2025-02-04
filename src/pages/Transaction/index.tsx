@@ -1,8 +1,17 @@
 import { SearchForm } from "../../components/SearchForm";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
+import { useEffect } from "react";
 
 export function Transaction() {
+  useEffect(() => {
+    fetch("http://localhost:3333/transactions").then((response) => {
+      response.json().then((data) => {
+        console.log(data);
+      });
+    });
+  }, []);
+
   return (
     <div>
       <Header />
