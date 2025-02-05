@@ -6,7 +6,7 @@
         "type": "income",
         "category": "Venda",
         "price": 14000,
-        "createdAt": "2025-02-03T23:55:54.946Z"
+        "createdAt": "2025-02-01T23:55:54.946Z"
     },
     {
         "id": 2,
@@ -14,7 +14,15 @@
         "type": "outcome",
         "category": "Alimentação",
         "price": 50,
-        "createdAt": "2025-02-03T24:55:54.946Z"
+        "createdAt": "2025-02-02T23:55:54.946Z"
+    },
+    {
+        "id": 3,
+        "description": "RockeatSet",
+        "type": "outcome",
+        "category": "Educação",
+        "price":1800,
+         "createdAt": "2025-02-04T23:55:54.946Z"
     }
 ]
     
