@@ -8,6 +8,10 @@ import { dateFormatter, priceFormatter } from "../../utils/formatter";
 export function Transaction() {
   const { transactions } = useContext(TransactionsContext);
 
+  transactions.map((transaction) => {
+    console.log(new Date(transaction.createdAt));
+  });
+
   return (
     <div>
       <Header />
@@ -37,7 +41,9 @@ export function Transaction() {
                   {transaction.category}
                 </td>
                 <td className="py-5 px-8 bg-gray-700 first:rounded-tl-md first:rounded-bl-md last:rounded-tr-md last:rounded-br-md">
-                  {dateFormatter.format(new Date(transaction.createdAt))}
+                  {transaction.createdAt
+                    ? dateFormatter.format(new Date(transaction.createdAt))
+                    : "Data inválida"}
                 </td>
               </tr>
             ))}

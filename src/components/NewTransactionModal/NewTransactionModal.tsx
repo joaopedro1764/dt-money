@@ -2,8 +2,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import { ArrowCircleDown, ArrowCircleUp, X } from "phosphor-react";
+import { useContext } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
+import { TransactionsContext } from "../../context/TransactionsContext";
 export function NewTransactionModal() {
   const newTransactionSchema = z.object({
     description: z.string(),
@@ -14,12 +16,17 @@ export function NewTransactionModal() {
 
   type NewTrasanctionsInputs = z.infer<typeof newTransactionSchema>;
 
-  const { register, handleSubmit, control } = useForm<NewTrasanctionsInputs>({
-    resolver: zodResolver(newTransactionSchema),
-  });
+  const { register, handleSubmit, control, reset } =
+    useForm<NewTrasanctionsInputs>({
+      resolver: zodResolver(newTransactionSchema),
+    });
 
-  function handleCreateNewTransaction(data: NewTrasanctionsInputs) {
-    console.log(data);
+  const { createTransactions } = useContext(TransactionsContext);
+
+  async function handleCreateNewTransaction(data: NewTrasanctionsInputs) {
+    createTransactions(data);
+
+    reset();
   }
 
   return (
