@@ -42,19 +42,21 @@ export function TransactionProvider({ children }: TransactionsProviderProps) {
         q: query,
       },
     });
-    setTransactions((state) => [response.data, ...state]);
+    setTransactions(response.data);
   }
 
   async function createTransactions(data: CreateTransactionInput) {
     const { category, description, price, type } = data;
 
-    await API.post("/transactions", {
+    const response = await API.post("/transactions", {
       category,
       description,
       price,
       type,
       createdAt: new Date(),
     });
+
+    setTransactions((state) => [...state, response.data]);
   }
 
   useEffect(() => {

@@ -1,29 +1,44 @@
 {
-    "transactions":[
-        {
-        "id": 1,
-        "description": "Desenvolvimento de site",
-        "type": "income",
-        "category": "Venda",
-        "price": 14000,
-        "createdAt": "2025-02-08T00:12:04.656Z"
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2025-02-08T00:12:04.656Z"
     },
     {
-        "id": 2,
-        "description": "Hamburguer",
-        "type": "outcome",
-        "category": "Alimentação",
-        "price": 50,
-        "createdAt": "2025-02-08T00:12:04.656Z"
+      "id": 2,
+      "description": "Hamburguer",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 50,
+      "createdAt": "2025-02-08T00:12:04.656Z"
     },
     {
-        "id": 3,
-        "description": "RockeatSet",
-        "type": "outcome",
-        "category": "Educação",
-        "price":1800,
-         "createdAt": "2025-02-08T00:12:04.656Z"
+      "category": "Basica",
+      "description": "Compra mercado",
+      "price": 1000,
+      "type": "outcome",
+      "createdAt": "2025-02-10T18:53:52.336Z",
+      "id": 3
+    },
+    {
+      "category": "123",
+      "description": "teste ",
+      "price": 123,
+      "type": "income",
+      "createdAt": "2025-02-10T22:18:41.275Z",
+      "id": 4
+    },
+    {
+      "description": "teste postaman",
+      "type": "income",
+      "category": "Venda",
+      "price": 1234,
+      "createdAt": "2025-02-08T00:12:04.656Z",
+      "id": 5
     }
-]
-    
+  ]
 }

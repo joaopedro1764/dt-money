@@ -8,10 +8,6 @@ import { dateFormatter, priceFormatter } from "../../utils/formatter";
 export function Transaction() {
   const { transactions } = useContext(TransactionsContext);
 
-  transactions.map((transaction) => {
-    console.log(new Date(transaction.createdAt));
-  });
-
   return (
     <div>
       <Header />
